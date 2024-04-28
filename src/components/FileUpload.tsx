@@ -13,6 +13,8 @@ import { uploadToS3 } from "@/lib/s3";
 import { cn } from "@/lib/utils";
 import { Input } from "./ui/input";
 
+export const maxDuration = 300;
+
 interface FileUploadProps {
   text?: string;
   className?: string;
