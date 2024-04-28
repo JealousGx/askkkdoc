@@ -7,8 +7,6 @@ import { getContext } from "@/lib/context";
 import openai from "@/lib/openai";
 import prisma from "@/lib/prisma";
 
-export const runtime = "edge";
-
 export async function POST(req: Request) {
   try {
     const { messages, chatId } = await req.json();

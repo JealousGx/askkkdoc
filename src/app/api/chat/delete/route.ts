@@ -5,8 +5,6 @@ import { deleteNamespace } from "@/lib/pinecone";
 import prisma from "@/lib/prisma";
 import { deleteFromS3 } from "@/lib/s3-server";
 
-export const runtime = "edge";
-
 export async function DELETE(req: Request) {
   try {
     const session = await getServerAuthSession();

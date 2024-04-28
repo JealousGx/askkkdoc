@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 
 import prisma from "@/lib/prisma";
 
-export const runtime = "edge";
-
 export const POST = async (req: Request) => {
   const { chatId } = await req.json();
 
