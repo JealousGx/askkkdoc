@@ -6,6 +6,7 @@ import { loadS3FileInPinecone } from "@/lib/pinecone";
 import prisma from "@/lib/prisma";
 import { getS3Url } from "@/lib/s3";
 
+export const runtime = "edge";
 export async function POST(req: Request, _res: Response) {
   const session = await getServerAuthSession();
 
