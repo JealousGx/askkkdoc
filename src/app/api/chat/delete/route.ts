@@ -33,10 +33,22 @@ export async function DELETE(req: Request) {
 
     const key = chat.fileKey;
 
-    await deleteNamespace(key);
-    await deleteFromS3(key);
-    await prisma.chat.delete({ where: { id: chatId } });
-    await prisma.messages.deleteMany({ where: { chatId } });
+    const deletePineconeNameSpacePromise = deleteNamespace(key);
+    const deleteS3FilePromise = deleteFromS3(key);
+    const deleteChatPromise = prisma.chat.delete({ where: { id: chatId } });
+    const deleteMessagesPromise = prisma.messages.deleteMany({
+      where: { chatId },
+    });
+
+    const promises = [
+      deletePineconeNameSpacePromise,
+      deleteS3FilePromise,
+      deleteChatPromise,
+      deleteMessagesPromise,
+    ];
+    await Promise.all(promises).catch((error) => {
+      throw new Error(error);
+    });
 
     const nextChat = await prisma.chat.findFirst({
       where: { userId: session.user.id },
