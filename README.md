@@ -43,7 +43,7 @@ Note: The live site will soon be taken down.
    git clone https://github.com/JealousGx/askkkdoc.git
    ```
 
-2. Install Python dependencies:
+2. Install dependencies:
 
    ```bash
    npm install
