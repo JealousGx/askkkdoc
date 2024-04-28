@@ -28,7 +28,7 @@ export const env = createEnv({
     GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
     GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
 
-    AWS_ACCESS_KEY: process.env.AWS_ACCESS_KEY,
+    AWS_ACCESS_KEY: process.env.AWS_ACCESS_KEY_ID,
     AWS_SECRET_KEY: process.env.AWS_SECRET_ACCESS_KEY,
     S3_BUCKET_NAME: process.env.S3_BUCKET_NAME,
 
