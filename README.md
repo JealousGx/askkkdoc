@@ -2,7 +2,7 @@
 
 Empower your documents to speak volumes! Our project seamlessly processes a variety of file formats - from PDFs and Word documents to images - extracting insightful information to answer your queries. Unlock the potential of your files and discover the answers you seek with ease.
 
-[Live site](https://jealous-askkkdoc.vercel.app)
+[Live site](https://askkkdoc.vercel.app)
 
 ## Overview
 
